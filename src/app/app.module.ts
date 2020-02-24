@@ -6,11 +6,25 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: '**', component: HomeComponent }
+  {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: 'aboutUs',
+    component: AboutUsComponent
+  },
+  {
+    path: '', redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
+    component: HomeComponent
+  }
 ]
 
 @NgModule({
@@ -18,7 +32,8 @@ const appRoutes: Routes = [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
